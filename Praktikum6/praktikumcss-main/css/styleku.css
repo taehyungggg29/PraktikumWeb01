@@ -1,0 +1,40 @@
+#header{
+    background-color: rgb(222, 197, 139);
+    text-align: center;
+}
+h1{
+    color:blue;
+}
+blockquote{
+    background-color:rgb(240, 201, 25);
+    border: 2px dotted black;
+}
+.nav{
+    text-align: center;
+}
+.nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+.nav ul il{
+    margin: 0em 1em;
+}
+.gambar{
+    text-align: center;
+}
+.jawa{
+    color: blue;
+    font-size: 50px;
+    font-weight: bold;
+}
+h3{
+    color: blue;
+}
+.promo{
+    text-align: center;
+    list-style: none;
+}
+.koleksi{
+    text-align: center;
+}
