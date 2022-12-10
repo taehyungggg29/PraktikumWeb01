@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Box</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+         
+        a{
+            text-decoration: none;
+            color: black;
+        }
+
+        .box{
+            display: none;
+            flex-direction: column;
+            background-color:gray;
+            width: 500px;
+            height: 300px;
+            margin-left: 700px;
+            margin-top: 110px;
+            padding: 1em;
+            border-radius: 5px;
+        }
+
+        .wadah_chat {
+            display: flex;
+            flex-direction: column;
+            justify-content:flex-end;
+            background-color: #fff;
+            width: 500px;
+            height: 3000px;
+            word-wrap: break-word;
+        }
+
+        .tab {
+            margin-left: 80%;
+            margin-top: 30%;
+        }
+
+        .tututab{
+            background-color:rgb(14, 91, 235);
+            border-radius: 5px;
+
+        }
+
+        .kirim{
+            background-color:aqua;
+            border-radius: 5px;
+            border: aqua;
+        }
+
+        .input{
+            border-radius: 5px;
+            border:red;
+        }
+    </style>
+    <script>
+        function dekor1() {
+            dekor_1 = document.getElementById("home");
+            dekor_1.style.color ="purple";
+        }
+
+        function dekor2() {
+            dekor_2 = document.getElementById("home");
+            dekor_2.style.color = "black";
+        }
+
+        
+        function chatbox1() {
+            const wadah = document.getElementById("wadah_chat");
+            const inputan = document.getElementById("masukan").value;
+            if(inputan.trim() != ""){
+                wadah.innerHTML += `<div class="wrap_text"> <p>` + inputan.trim() + `</p> </div>`
+                masukan.value = "";
+                masukan.focus();
+            }
+        }
+
+        function bukatab() {
+            const tab = document.getElementById("tab");
+            const box = document.getElementById("box");
+            box.style.display ="flex"
+            tab.style.display ="none"
+        }
+
+        function tutuptab() {
+            const tab = document.getElementById("tab");
+            const box = document.getElementById("box");
+            box.style.display = "none";
+            box.style.display = "flex";
+        }
+    </script>
+</head>
+<body>
+    <a href="" onmouseover="dekor1()" onmouseover="dekor2()" id="home"><h1>Annyeong!! Welcome Delia Puspitasari Chat box</h1></a>
+    <hr>
+    <br>
+
+    <button class="tab" id="tab" onclick="bukatab()"><h3>Click Here to Send Massage</h3></button>
+
+    <div class="box" id="box">
+        <button class="tutuptab" id="tutuptab" onclick="tutuptab()"><h3>Chat</h3></button>
+        <div class="wadah_chat" id="wadah_chat"></div>
+        <div>
+            
+            <input class="input" id="masukan" type="text" value="" size="50">
+            <button onclick="chatbox1()" class="kirim">Send</button>
+        </div>
+    </div>
+    <br>
+</body>
+</html>
