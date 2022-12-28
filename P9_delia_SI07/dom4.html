@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum 9.4</title>
+</head>
+<body>
+    <input type="text" id="NilaiPertama">
+    <h3>+</h3>
+    <input type="text" id="NilaiKedua" onchange="tampil()">
+    <h3>=</h3>
+    <input type="text" id="Hasil">
+
+    <script>
+        function tampil(){
+            penampung = parseInt(NilaiPertama.value) + parseInt(NilaiKedua.value) 
+            Hasil.value = penampung
+        }
+    </script>
+</body>
+</html>
